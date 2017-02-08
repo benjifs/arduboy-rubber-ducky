@@ -20,6 +20,7 @@ uint8_t sequence[] = {
 	B_BUTTON, A_BUTTON
 };
 uint8_t next_key = 0;
+bool konami = true;
 
 Arduboy arduboy;
 
@@ -30,21 +31,21 @@ void setup() {
 }
 
 void loop() {
-	if (!(arduboy.nextFrame())) return;
+  if (!(arduboy.nextFrame())) return;
 
-	updateButtonState(arduboy);
+  updateButtonState(arduboy);
 
-	arduboy.clearDisplay();
+  arduboy.clearDisplay();
 
-	if (next_key == ARRAY_LENGTH(sequence)) {
-		drawMenu(arduboy);
-	} else {
-		arduboy.drawBitmap(0, 8, ducky, 128, 48, WHITE);
+  if (konami && next_key != ARRAY_LENGTH(sequence)) {
+    arduboy.drawBitmap(0, 8, ducky, 128, 48, WHITE);
 
-		if (isNewKeyPress()) {
-			next_key = buttonPressed(sequence[next_key]) ? next_key + 1 : 0;
-		}
-	}
+    if (isNewKeyPress()) {
+      next_key = buttonPressed(sequence[next_key]) ? next_key + 1 : 0;
+    }
+  } else {
+    drawMenu(arduboy);
+  }
 
-	arduboy.display();
+  arduboy.display();
 }
