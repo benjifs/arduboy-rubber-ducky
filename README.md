@@ -5,6 +5,9 @@ by [Benji Encalada](http://benji.dog) | [@benjifs](http://twitter.com/benjifs)
 ## Overview
 This is a simple application to manage and run [DuckyScript payloads](https://github.com/hak5darren/USB-Rubber-Ducky/wiki/Payloads) for HID Attacks from your Arduboy. This project was inspired by the [USB Rubber Ducky](https://hakshop.com/products/usb-rubber-ducky-deluxe) with help from [Dckuino.js](https://github.com/Thecakeisgit/Dckuino.js) for translating DuckyScript payloads to Arduino.
 
+## Requirements
+To compile and upload this code to your Arduboy you're going to need to install the [Arduino IDE](https://www.arduino.cc/en/Main/Software) as well as the [Arduboy2](https://github.com/MLXXXp/Arduboy2).
+
 ## Usage
 After you've uploaded the Arduboy Rubber Ducky code to your Arduboy you should see a rubber ducky icon on the screen. At this point you should enter the [Konami Code](https://en.wikipedia.org/wiki/Konami_Code) to get access to the main menu which shows the available payloads. You can then choose one of the available payloads from the menu and watch it run on your computer.
 
