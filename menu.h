@@ -20,7 +20,7 @@ void checkSelections() {
 	selected = 0;
 }
 
-void drawMenu(Arduboy &arduboy) {
+void drawMenu(Arduboy2 &arduboy) {
 	checkSelections();
 
 	pages = ceil((1.0 * LABELS) / PAGE_SIZE);

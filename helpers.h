@@ -4,7 +4,7 @@
 uint8_t prevButtonState = 0;
 uint8_t currButtonState = 0;
 
-void updateButtonState(Arduboy &a) {
+void updateButtonState(Arduboy2 &a) {
 	prevButtonState = currButtonState;
 	currButtonState = a.buttonsState();
 }

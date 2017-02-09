@@ -5,7 +5,7 @@
  * @benjifs
  */
 
-#include "Arduboy.h"
+#include "Arduboy2.h"
 #include "Keyboard.h"
 
 #include "bitmaps.h"
@@ -22,10 +22,10 @@ uint8_t sequence[] = {
 uint8_t next_key = 0;
 bool konami = true;
 
-Arduboy arduboy;
+Arduboy2 arduboy;
 
 void setup() {
-	arduboy.start();
+	arduboy.begin();
 
 	arduboy.setFrameRate(30);
 }
@@ -35,7 +35,7 @@ void loop() {
 
   updateButtonState(arduboy);
 
-  arduboy.clearDisplay();
+  arduboy.clear();
 
   if (konami && next_key != ARRAY_LENGTH(sequence)) {
     arduboy.drawBitmap(0, 8, ducky, 128, 48, WHITE);
